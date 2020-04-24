@@ -3,16 +3,20 @@ The repository contains deep learning (Densenet121, Resnet18) and ML based (Rand
 * Normal vs. Abnormal Detection - In this case, the model tries to classify chest X-rays as either normal or abnormal (having pneumonia or covid).
 * Covid vs. Pneumonia Detection - In this case, the model tries to classfy chest X-rays as either covid or pneumonia.
 
-## Getting Started
+## Directory Structure
 ```
 deepModels\ -> Contains 3 Deep learning models implementation
 featureFiles\ -> Contains feature files required to run Random Forest classifier
 model_checkPoints\ -> Contains saved weights for the trained CNNs
 randomForest\ -> Contains Random Forest implementation
 ```
+#### Running Random Forest
+* The ```randomForest``` folder contains the data as well as the notebook, so the classifier can be executed directly without making modifications to any file path.
+
+#### Running Densenet121 and Resent18
+* The ```model_checkpoints``` folder contain the weights for the CNN models. The data should be loaded first as ```Dataloader``` and the weights should be loaded in the model second. The **prediction** section of the jupyter notebook should then be executed. 
 
 ### Prerequisites
-
 Running **Jupyter Notebooks** requires correct path to the input data and the following **packages** for ```python-3.x```
 
 ```
@@ -56,8 +60,6 @@ For all the **models** mentioned below (**except UNET**), **4800** samples used 
 2. The model is trained for 200 epochs.
 3. 512 features for Bottleneck.
 4. Lowest Validation loss acheived: 1.47.
-![picture]("C:\Users\\AnilYadav\\Desktop\\Projects\\covid-19\\U-netLoss.png)
-
 
 **Densenet121**: This model is trained for both part of the project (Normal vs. Abnormal and Pneumonia vs. Covid)
 
